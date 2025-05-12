@@ -32,9 +32,9 @@
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-flex-wrap: nowrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: nowrap;
-    -webkit-align-items: center;
+    -webkit-align-items: flex-direction;
     align-items: center;
     -webkit-flex: 1 0 0;
     flex: 1 0 0;
