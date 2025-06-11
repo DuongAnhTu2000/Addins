@@ -41,7 +41,7 @@ describe(`PowerPoint`, function () {
     const officeMock = new OfficeMockObject(PowerPointMockData);
     global.PowerPoint = officeMock as any;
 
-    await insertText("Hello PowerPoint");
+    await insertText("Neque porro quisquam est qui dolorem ipsum quia dolor sit amet");
 
     assert.strictEqual(shapes[0].text, "Hello PowerPoint");
   });
