@@ -10,7 +10,7 @@ const WordMockData = {
     document: {
       body: {
         paragraph: {
-          text: "",
+          text: "university",
         },
         insertParagraph: function (paragraphText: string, insertLocation: Word.InsertLocation): Word.Paragraph {
           this.paragraph.text = paragraphText;
