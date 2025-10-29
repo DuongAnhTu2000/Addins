@@ -9,6 +9,10 @@ import * as testHelpers from "./src/test-helpers";
 
 /* global process, describe, before, it, after */
 
+function after(_arg0: string, _arg1: () => Promise<void>) {
+  throw new Error("Function not implemented.");
+}
+
 const hosts = ["Excel", "PowerPoint", "Word"];
 const manifestPath = path.resolve(`${process.cwd()}/test/end-to-end/test-manifest.xml`);
 const testServerPort: number = 4201;
@@ -34,7 +38,7 @@ hosts.forEach(function (host) {
         appType: AppType.Desktop,
         devServerCommandLine: devServerCmd,
         devServerPort: devServerPort,
-        enableDebugging: false,
+        enableDebugging: true,
       });
     }),
       describe(`Get test results for ${host} taskpane project`, function () {
@@ -65,3 +69,4 @@ hosts.forEach(function (host) {
 after(`Unregister the add-in`, async function () {
   return stopDebugging(manifestPath);
 });
+
